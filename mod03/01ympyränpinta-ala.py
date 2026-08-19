@@ -3,5 +3,5 @@
 säde = float(input('syötä ympyrän pintala: '))
 pi = 3.14159
 
-print(pi*säde**2, 'm2')
+print('ympyrän pinta-ala on ', pi*säde**2, 'm2')
 
