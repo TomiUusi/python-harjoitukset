@@ -2,10 +2,10 @@
 
 **Tomi Uusitalo**
 
-## Moduuli 1
+## Moduuli 1 ja 2
 
 Tein tehtävät 1 ja 2.
 
-## Moduuli 2
+## Moduuli 3
 
-Tein tehtävät 1, 2 ja 3.
+Tein tehtävät 1, 2, 3, 4 ja 5
