@@ -16,8 +16,8 @@ luoti3 = luoti*luoti2
 
 tarkka = float(leviskä3 + naula3 + luoti3)
 tulos = int(leviskä3 + naula3 + luoti3)
-grammat = round(tarkka - tulos, 5)
+grammat = tarkka - tulos
 
-
-print(tulos, 'kilogrammaa', grammat * 1000, 'grammaa')
+print('Massa nykymittojen mukaan: ')
+print(tulos, 'kilogrammaa', round(grammat * 1000, 2), 'grammaa')
 
