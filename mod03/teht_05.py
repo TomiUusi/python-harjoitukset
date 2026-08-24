@@ -19,5 +19,5 @@ tulos = int(leviskä3 + naula3 + luoti3)
 grammat = tarkka - tulos
 
 print('Massa nykymittojen mukaan: ')
-print(tulos, 'kilogrammaa', round(grammat * 1000, 2), 'grammaa')
+print(f'{tulos} kilogrammaa {round(grammat * 1000, 2)} grammaa.')
 
