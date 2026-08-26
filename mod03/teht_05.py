@@ -1,21 +1,21 @@
-# Yksi leviskä on 20 naulaa
+# Yksi leiviskä on 20 naulaa
 # yksi naula on 32 luotia
 # Yksi luoti on 13,3g
 
 luoti = 0.0133
 naula = 32*luoti
-leviskä = 20*naula
+leiviskä = 20*naula
 
-leviskä2 = float(input('anna leviskät: '))
+leiviskä2 = float(input('anna leviskät: '))
 naula2 = float(input('anna naulat: '))
 luoti2 = float(input('anna luodit: '))
 
-leviskä3 = leviskä*leviskä2
+leiviskä3 = leiviskä*leiviskä2
 naula3 = naula*naula2
 luoti3 = luoti*luoti2
 
-tarkka = float(leviskä3 + naula3 + luoti3)
-tulos = int(leviskä3 + naula3 + luoti3)
+tarkka = leiviskä3 + naula3 + luoti3
+tulos = int(leiviskä3 + naula3 + luoti3)
 grammat = tarkka - tulos
 
 print('Massa nykymittojen mukaan: ')
