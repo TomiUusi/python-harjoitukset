@@ -3,7 +3,7 @@
 #B on ikkunaton hytti autokannen yläpuolella.
 #C on ikkunaton hytti autokannen alapuolella.
 
-luokka = input('Anna hyttiluokkasi (A, B, C, LUX): ')
+luokka = input('Anna hyttiluokkasi (A, B, C, LUX): ').capitalize()
 
 if luokka == 'A':
     print('A on ikkunallinen hytti autokannen yläpuolella.')

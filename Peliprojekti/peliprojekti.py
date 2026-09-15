@@ -18,3 +18,20 @@ else:
 
     else:
         print('lopetit pelin')
+
+# Usein while rakennetta käytetään ja varsinkin teidän projekteissa!!
+# ns. pääsilmukka ELI main loop
+
+Peli_käynissä = True
+# main loop
+print('Tervetuloa peliini!!')
+
+while Peli_käynissä:
+    print('Valitse minne mennään. (j tai l)')
+    # j jatkaa peliä ja l lopettaa
+    valinta = input('anna komento: ')
+    if valinta == 'j':
+        print('Jatketaan peliä')
+    if valinta == 'l':
+        print('lopetetaan peli')
+        Peli_käynissä = False
