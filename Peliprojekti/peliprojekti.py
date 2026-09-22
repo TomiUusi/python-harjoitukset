@@ -12,11 +12,13 @@ elif ikä < 12:
 else:
     print(f'tervetuloa pelaamaan peliä {name}, ikäsi on {ikä}.')
 
- 
+## Pelaajan tilastot
 inventaario = []
 hp = 100
 energia = 100
 kylläisyys = 100
+
+## Luodaan päävalikon funktiot
 
 def etsi_esine():
     esine = input('Minkä esineen löysit: ')
@@ -27,6 +29,7 @@ def näytä_inventaario():
     print('----INVENTAARIO----')
     for esine in inventaario:
         print(f'> {esine}')
+    print('-------------------')
 
 def näytä_tilastot():
     print('----PELAAJAN TILASTOT----')
@@ -34,14 +37,13 @@ def näytä_tilastot():
     print(f'Energia: {energia}')
     print(f'Kylläisyys: {kylläisyys}')
 
-
-
-
 # Usein while rakennetta käytetään ja varsinkin teidän projekteissa!!
 # ns. pääsilmukka ELI main loop
 
 Peli_käynissä = True
-# main loop
+
+# Pääsilmukka
+
 print('Tervetuloa peliini!!')
 
 while Peli_käynissä:
@@ -50,6 +52,7 @@ while Peli_käynissä:
     print('2. Näytä inventaario')
     print('3. Näytä tilastot')
     print('4. lopeta peli')
+    print('------------------------')
 
     valinta = input('anna komento: ')
 
