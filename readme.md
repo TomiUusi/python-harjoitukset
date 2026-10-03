@@ -28,7 +28,7 @@ Tein tehtävät 1, 2, 3 ja 4
 
 ## Moduuli 8
 
-Tein tehtävät 1
+Tein tehtävät 1 ja 2
 
 ## Moduuli 9 
 
@@ -37,3 +37,7 @@ Tein tehtävät 1, 2 ja 3
 ## Moduuli 10 
 
 Tein tehtävät 1, 2 ja 3
+
+## Moduuli 11
+
+tein tehtävän 1

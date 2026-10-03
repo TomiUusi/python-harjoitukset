@@ -1,0 +1,23 @@
+
+=========================== ohjeet ===========================
+
+Pelin aloittaminen 
+------------------
+
+1. Kirjoita nimimerkki
+2. kirjoita ikäsi. Huomaathan että pelin ikäraja on k-12
+3. Lue alkuteksti ja siirry päävalikkoon
+
+päävalikko
+----------
+
+1. Näyttää nykyisen kaupan tuotteet, hinnat ja
+ympäristö pisteet, joita saat tai menetät.
+2. Näyttää kaupan puhelimet numeroituna.
+Kirjoita ostettavaa puhelinta vastaava numero.
+3. Näyttää puhelimen/puhelimet, jotka olet ostanut.
+4. Siirry toiseen kauppaan. Aloitat Kännykadulta,
+joten et voi ostaa mitään ennen kuin siirryt 
+kauppaan.
+5. Päättää pelin ja näyttää lopputuloksen.
+6. Poistuu pelistä ilman loppua.

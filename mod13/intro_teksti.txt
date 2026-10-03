@@ -1,0 +1,1 @@
+Tämä ohjelma esittelee python tiedostoon tallennusta.

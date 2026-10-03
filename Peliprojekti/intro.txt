@@ -1,0 +1,20 @@
+
+============================ intro ============================
+
+Olet matkalla koulusta kotiin, kun puhelimesi livahtaa taskusta.
+Kolahdus! Näyttö meni rikki.
+
+Onneksi sinulla on jäänyt 2000€ taskuun kesätyö rahoista.
+
+Saavut kännykatu 22 kadulle ja edessä on valinta:
+
+Voit mennä joko myymälään, missä myydään puhelimia suoraan tehtaalta.
+Tämä toki rasittaa luontoa ja käy kalliiksi.
+
+Toinen vaihtoehto on kadun toisella puolella oleva myymälä, jossa myydään
+käytettyjä puhelimia. Tämä on huomattavasti ympäristö ystävällisempi idea ja 
+puhelimet ovat kaiken lisäksi paljon edullisempia. 
+
+Voit myös olla ostamatta mitään ja yrittää pärjätä vanhalla puhelimella.
+Vaikka näyttö onkin rikki, puhelin kyllä toimii.
+
