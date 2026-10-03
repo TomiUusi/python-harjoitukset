@@ -7,8 +7,8 @@ kauppa2 = Huone('Toisen käden Luuri (Kauppa)')
 
 
 Uusi_puhelin1 = Esine('MePhone 23 Ultra Pro Max Plus', 1999, -20)
-Uusi_puhelin2 = Esine('Mansung Super Fold 27', 1599, -20)
-käytetty_puhelin1 = Esine('Mokia 3310', 199, 25)
+Uusi_puhelin2 = Esine('Mansung Super Fold 67', 1599, -20)
+käytetty_puhelin1 = Esine('Mogia 3310', 199, 25)
 käytetty_puhelin2 = Esine('Rotomola 2', 99, 25)
 
 
@@ -26,6 +26,10 @@ with open('peliprojekti/ohjeet.txt','r') as tiedosto:
 name = input('Kerro nimesi: ')
 ikä = int(input('kerro ikäsi: '))
 
+with open('peliprojekti/intro.txt','r') as tiedosto:
+    data = tiedosto.read()
+    print(data)
+    print('')
 
 if ikä < 0:
     print('Et ole edes vielä syntynyt!')

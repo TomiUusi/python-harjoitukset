@@ -18,7 +18,7 @@ Tein tehtävät 1, 2, 3 ja 4
 
 Tein tehtävät 1, 2, 3, 4, ja 5
 
-## Moduuli 6 
+## Moduuli 6
 
 Tein tehtävät 1, 2, 3 ja 4
 
@@ -30,14 +30,18 @@ Tein tehtävät 1, 2, 3 ja 4
 
 Tein tehtävät 1 ja 2
 
-## Moduuli 9 
+## Moduuli 9
 
 Tein tehtävät 1, 2 ja 3
 
-## Moduuli 10 
+## Moduuli 10
 
 Tein tehtävät 1, 2 ja 3
 
 ## Moduuli 11
 
 tein tehtävän 1
+
+## Moduuli 12
+
+projekti 4 tehty.
