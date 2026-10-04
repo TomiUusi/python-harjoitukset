@@ -1,5 +1,4 @@
 from peli import Esine, Huone, Pelaaja
-import json
 
 Kännykatu = Huone('Kännykatu 22')
 kauppa1 = Huone('Uunituore Luuri (Kauppa)')
@@ -17,8 +16,12 @@ kauppa1.lisää_esine(Uusi_puhelin2)
 kauppa2.lisää_esine(käytetty_puhelin1)
 kauppa2.lisää_esine(käytetty_puhelin2)
 
+huoneet = {h.nimi: h for h in (Kännykatu, kauppa1, kauppa2)}
+kaikki_esineet = {e.nimi: e for e in (Uusi_puhelin1, Uusi_puhelin2,
+                                       käytetty_puhelin1, käytetty_puhelin2)}
 
-with open('peliprojekti/ohjeet.txt','r') as tiedosto:
+
+with open('peliprojekti/ohjeet.txt', 'r', encoding = 'utf-8') as tiedosto:
     data = tiedosto.read()
     print(data)
     print('')
@@ -26,7 +29,7 @@ with open('peliprojekti/ohjeet.txt','r') as tiedosto:
 name = input('Kerro nimesi: ')
 ikä = int(input('kerro ikäsi: '))
 
-with open('peliprojekti/intro.txt','r') as tiedosto:
+with open('peliprojekti/intro.txt','r', encoding = 'utf-8') as tiedosto:
     data = tiedosto.read()
     print(data)
     print('')
@@ -59,7 +62,9 @@ while peli_käynissä:
     print('3. Näytä inventaario')
     print('4. Liiku')
     print('5. Lähde kotiin (päätä peli)')
-    print('6. Lopeta peli')
+    print('6. Tallenna peli')
+    print('7. Lataa peli')
+    print('8. Lopeta peli')
     print('------------------------')
 
     valinta = input('Anna komento: ')
@@ -95,6 +100,12 @@ while peli_käynissä:
         peli_käynissä = False
 
     elif valinta == '6':
+        pelaaja.tallenna_peli()
+
+    elif valinta == '7':
+        pelaaja.lataa_peli(huoneet, kaikki_esineet)
+
+    elif valinta == '8':
         print('Lopetetaan peli.')
         peli_käynissä = False
 

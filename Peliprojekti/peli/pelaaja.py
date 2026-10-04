@@ -1,3 +1,8 @@
+import json
+import os
+
+TALLENNUSKANSIO = os.path.dirname(os.path.abspath(__file__))
+
 class Pelaaja:
 
     def __init__(self, nimi, sijainti):
@@ -83,3 +88,54 @@ class Pelaaja:
 
         print(f'\nLopullinen rahatilanne: {self.raha}€')
         print(f'Kiitos pelaamisesta {self.nimi}!')
+
+    def _tallennuspolku(self):
+        return TALLENNUSKANSIO / f'tallennus_{self.nimi.lower()}.json'
+
+    def _tallennuspolku(self):
+        return os.path.join(TALLENNUSKANSIO, f'tallennus_{self.nimi.lower()}.json')
+
+    def tallenna_peli(self):
+        data = {
+            'nimi': self.nimi,
+            'sijainti': self.sijainti.nimi,
+            'raha': self.raha,
+            'ympäristö_pisteet': self.ympäristö_pisteet,
+            'esineet': [esine.nimi for esine in self.esineet],
+        }
+        try:
+            polku = self._tallennuspolku()
+            os.makedirs(os.path.dirname(polku), exist_ok=True)
+            with open(polku, 'w', encoding='utf-8') as file:
+                json.dump(data, file, ensure_ascii=False, indent=2)
+            print(f'Peli tallennettu: {polku}')
+        except OSError as e:
+            print(f'Tallennus epäonnistui: {e}')
+
+    def lataa_peli(self, huoneet, kaikki_esineet):
+        """huoneet ja kaikki_esineet ovat sanakirjoja: nimi -> olio."""
+        try:
+            with open(self._tallennuspolku(), 'r', encoding='utf-8') as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            print('Tallennusta ei löydy.')
+            return
+        except (OSError, json.JSONDecodeError) as e:
+            print(f'Tiedoston käsittelyssä tapahtui virhe: {e}')
+            return
+
+        try:
+            self.sijainti = huoneet[data['sijainti']]
+            self.raha = data['raha']
+            self.ympäristö_pisteet = data['ympäristö_pisteet']
+            self.esineet = [kaikki_esineet[nimi] for nimi in data['esineet']]
+        except KeyError as e:
+            print(f'Tallennus on vioittunut, puuttuu: {e}')
+            return
+
+        print('Peli ladattu.')
+
+
+
+
+

@@ -12,12 +12,14 @@ päävalikko
 ----------
 
 1. Näyttää nykyisen kaupan tuotteet, hinnat ja
-ympäristö pisteet, joita saat tai menetät.
+   ympäristö pisteet, joita saat tai menetät.
 2. Näyttää kaupan puhelimet numeroituna.
-Kirjoita ostettavaa puhelinta vastaava numero.
+   Kirjoita ostettavaa puhelinta vastaava numero.
 3. Näyttää puhelimen/puhelimet, jotka olet ostanut.
 4. Siirry toiseen kauppaan. Aloitat Kännykadulta,
-joten et voi ostaa mitään ennen kuin siirryt 
-kauppaan.
+   joten et voi ostaa mitään ennen kuin siirryt 
+   kauppaan.
 5. Päättää pelin ja näyttää lopputuloksen.
-6. Poistuu pelistä ilman loppua.
+6. Tallentaa pelin.
+7. Lataa aikaisemman pelin.
+8. Poistuu pelistä ilman loppua.
