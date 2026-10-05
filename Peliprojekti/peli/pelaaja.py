@@ -89,8 +89,6 @@ class Pelaaja:
         print(f'\nLopullinen rahatilanne: {self.raha}€')
         print(f'Kiitos pelaamisesta {self.nimi}!')
 
-    def _tallennuspolku(self):
-        return TALLENNUSKANSIO / f'tallennus_{self.nimi.lower()}.json'
 
     def _tallennuspolku(self):
         return os.path.join(TALLENNUSKANSIO, f'tallennus_{self.nimi.lower()}.json')
@@ -105,24 +103,24 @@ class Pelaaja:
         }
         try:
             polku = self._tallennuspolku()
-            os.makedirs(os.path.dirname(polku), exist_ok=True)
-            with open(polku, 'w', encoding='utf-8') as file:
-                json.dump(data, file, ensure_ascii=False, indent=2)
+            with open(polku, 'w') as file:
+                json.dump(data, file)
             print(f'Peli tallennettu: {polku}')
-        except OSError as e:
-            print(f'Tallennus epäonnistui: {e}')
+        except FileNotFoundError:
+            print("Tiedostoa ei löydy.")
+        except IOError:
+            print("Tiedoston käsittelyssä tapahtui virhe.")
 
     def lataa_peli(self, huoneet, kaikki_esineet):
-        """huoneet ja kaikki_esineet ovat sanakirjoja: nimi -> olio."""
+
         try:
-            with open(self._tallennuspolku(), 'r', encoding='utf-8') as file:
+            with open(self._tallennuspolku(), 'r') as file:
                 data = json.load(file)
         except FileNotFoundError:
             print('Tallennusta ei löydy.')
             return
-        except (OSError, json.JSONDecodeError) as e:
-            print(f'Tiedoston käsittelyssä tapahtui virhe: {e}')
-            return
+        except IOError:
+            print("Tiedoston käsittelyssä tapahtui virhe.")
 
         try:
             self.sijainti = huoneet[data['sijainti']]
@@ -130,7 +128,7 @@ class Pelaaja:
             self.ympäristö_pisteet = data['ympäristö_pisteet']
             self.esineet = [kaikki_esineet[nimi] for nimi in data['esineet']]
         except KeyError as e:
-            print(f'Tallennus on vioittunut, puuttuu: {e}')
+            print(f'Tallennus puuttuu:')
             return
 
         print('Peli ladattu.')
